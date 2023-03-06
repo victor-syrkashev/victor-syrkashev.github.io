@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Victor Syrkashev | Frontend Developer</title>
+    <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img class="logo" src="./images/VS.svg" alt="Logo" />
+        <a href="mailto:victor.syrkashev@gmail.com">Связаться со мной</a>
+      </nav>
+      <div class="hero">
+        <div class="text">
+          <h1>Виктор Сыркашев</h1>
+          <h2>Фронтенд-разработчик</h2>
+        </div>
+        <div class="img-container">
+          <img
+            class="avatar"
+            src="./images/man-raising-hand.svg"
+            alt="avatar image"
+          />
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="introduction">
+        <div class="about">
+          <h2>Добро пожаловать!</h2>
+          <p>
+            Меня зовут Виктор, я фронтенд-разработчик из Санкт-Петербурга.
+            Интересуюсь веб технологиями, занимаюсь разработкой собственных
+            проектов, изучением библиотек и фреймворков.
+          </p>
+        </div>
+        <div class="skill">
+          <h2>Список технологий, в которых у меня есть опыт</h2>
+          <ul class="skill-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Sass</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Bootstrap</li>
+            <li>Git</li>
+            <li>Node.js</li>
+            <li>Express</li>
+          </ul>
+        </div>
+      </section>
+      <section class="projects">
+        <h2>Мои последние проекты</h2>
+        <div class="container">
+          <div class="project-card">
+            <img
+              src="./images/weather-forecast.png"
+              alt="weather-forecast-icon"
+            />
+            <div class="hidden">
+              <p>Сайт прогноза погоды с меняющимся фоновым изображением</p>
+              <button type="button">
+                <a
+                  href="http://ec2-52-91-144-112.compute-1.amazonaws.com:8000/"
+                  target="_blank"
+                  >Посмотреть</a
+                >
+              </button>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="./images/snake.png" alt="weather-forecast-icon" />
+            <div class="hidden">
+              <p>Классическая игра змейка с поддержкой мобильных устройств</p>
+              <button type="button">
+                <a
+                  href="https://victor-syrkashev.github.io/snake/"
+                  target="_blank"
+                  >Посмотреть</a
+                >
+              </button>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="./images/bookshelf.png" alt="bookshelf-icon" />
+            <div class="hidden">
+              <p>
+                Приложение для учета прочитанных книг. Аналог цифровой
+                библиотеки
+              </p>
+              <button type="button">
+                <a
+                  href="https://github.com/victor-syrkashev/bookshelf"
+                  target="_blank"
+                  >Посмотреть</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <a href="https://github.com/victor-syrkashev" target="_blank"
+          ><img src="./images/github-icon.svg" alt="My GitHub page"
+        /></a>
+        <p class="copyright"></p>
+      </div>
+    </footer>
+    <script>
+      const year = new Date().getFullYear();
+      const copyrightString = document.querySelector('.copyright');
+      copyrightString.innerHTML = `&copy;${year} victor-syrkashev.github.io`;
+    </script>
+  </body>
+</html>
