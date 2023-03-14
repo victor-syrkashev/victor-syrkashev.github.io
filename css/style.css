@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+  --violet-color: #945aa4;
+  --text-color: rgb(55, 55, 55);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-color);
+}
+
+h1,
+h2,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  margin-bottom: 5rem;
+}
+
+nav a img {
+  width: 4rem;
+  height: 100%;
+}
+
+nav a:hover img {
+  opacity: 0.8;
+}
+
+.logo {
+  width: 5rem;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 8rem;
+}
+
+.hero h1 {
+  font-size: 6rem;
+  font-weight: 400;
+}
+
+.hero h2 {
+  font-size: 4rem;
+  font-weight: 300;
+}
+
+.hero .text {
+  margin-left: 1rem;
+}
+
+.container {
+  display: grid;
+  place-content: center;
+}
+
+.avatar {
+  width: 20rem;
+  border-radius: 12rem;
+  padding: 1rem;
+}
+
+main h2 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.introduction {
+  background-color: var(--violet-color);
+  display: grid;
+  gap: 5rem;
+  place-items: center;
+  text-align: center;
+  padding: 8rem 0;
+  margin-bottom: 8rem;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.introduction .about {
+  width: 80vw;
+  color: rgb(255, 255, 255);
+}
+
+.introduction .about p:nth-child(2) {
+  margin-bottom: 2rem;
+}
+
+.introduction .skill {
+  width: 70vw;
+  padding: 5rem;
+  background-color: rgb(255, 255, 255);
+  color: var(--text-color);
+  border-radius: 3rem;
+  box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.skill-list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.skill-list li {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--violet-color);
+  border-radius: 1rem;
+  font-size: 1.7rem;
+}
+
+.projects {
+  gap: 3rem;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.projects .container {
+  margin-bottom: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.project-card {
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  height: 18rem;
+  box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s linear;
+}
+
+.project-card img {
+  object-fit: cover;
+  width: 31rem;
+  height: 18.1rem;
+  border-radius: 2rem;
+}
+
+.project-card::after {
+  content: '';
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 0;
+  transition: opacity 0.3s linear;
+}
+
+.project-card:hover::after {
+  opacity: 1;
+}
+
+.project-card:hover .hidden {
+  visibility: visible;
+  opacity: 1;
+}
+
+.hidden {
+  color: rgb(255, 255, 255);
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: visibility 0.3s linear, opacity 0.3s linear;
+  z-index: 1;
+  font-size: 1.3rem;
+  width: 80%;
+}
+
+.hidden button {
+  margin-top: 1rem;
+  background-color: transparent;
+  border: 1px solid var(--violet-color);
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: background-color 0.3s linear;
+}
+
+.hidden button:hover {
+  background-color: var(--violet-color);
+}
+
+.hidden a {
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.contacts a[href^='mailto:'] {
+  font-size: 1.7rem;
+  background-color: var(--violet-color);
+  color: rgb(255, 255, 255);
+  padding: 0.7rem 2rem;
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  transition: background-color 0.2s linear, box-shadow 0.2s linear;
+}
+
+.contacts a[href^='mailto:']:hover {
+  background-color: rgb(170, 123, 183);
+}
+
+.contacts a[href^='mailto:']:active {
+  box-shadow: none;
+}
+
+footer .container {
+  display: flex;
+  margin: 2rem;
+}
+
+@media screen and (max-width: 700px) {
+  nav {
+    padding: 2rem 1rem;
+  }
+
+  a[href^='mailto:'] {
+    font-size: 1.1rem;
+    border-radius: 0.4rem;
+    padding: 0.6rem 0.7rem;
+  }
+
+  .hero .text {
+    text-align: center;
+    margin: 0;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  .hero h2 {
+    font-size: 1.7rem;
+  }
+
+  .introduction {
+    font-size: 1.3rem;
+  }
+
+  .introduction .about {
+    width: 85vw;
+    padding: 0;
+  }
+
+  .introduction .skill {
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+
+  .skill-list li {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--violet-color);
+    border-radius: 1rem;
+  }
+
+  main h2 {
+    font-size: 1.7rem;
+  }
+
+  .skill-list li {
+    padding: 0.3rem 0.7rem;
+    border-radius: 0.8rem;
+  }
+
+  .project-card {
+    border-radius: 1rem;
+    height: 12.7rem;
+  }
+
+  .project-card img {
+    width: 22rem;
+    height: 12.8rem;
+    border-radius: 1rem;
+  }
+
+  .hidden {
+    font-size: 1.1rem;
+  }
+
+  .hidden button {
+    border-radius: 0.8rem;
+  }
+
+  .hidden a {
+    font-size: 1rem;
+  }
+}
