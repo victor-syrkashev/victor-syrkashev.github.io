@@ -102,7 +102,7 @@ main h2 {
   color: rgb(255, 255, 255);
 }
 
-.introduction .about p:nth-child(2) {
+.introduction .about p:not(p:last-child) {
   margin-bottom: 2rem;
 }
 
@@ -224,6 +224,10 @@ main h2 {
   align-items: center;
   gap: 2rem;
   margin-bottom: 5rem;
+}
+
+.contacts h2 {
+  text-align: center;
 }
 
 .contacts a[href^='mailto:'] {
